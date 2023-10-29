@@ -23,5 +23,12 @@ Registration
     input text      //*[@id="f_cmu_email2"]     ${name}
     input text      //*[@id="f_cmu_password"]      ${password}
     input text      //*[@id="f_cmu_password2"]      ${password}
-    Checkbox Should Not Be Selected
-
+    Checkbox Should Not Be Selected  //*[@id="newsletter_agree"]
+    select checkbox  //*[@id="newsletter_agree"]
+    Checkbox Should Not Be Selected  //*[@id="user_register_form"]/fieldset/label[2]/input
+    select checkbox  //*[@id="user_register_form"]/fieldset/label[2]/input
+    Checkbox Should Not Be Selected  //*[@id="user_register_form"]/fieldset/label[3]/input
+    select checkbox  //*[@id="user_register_form"]/fieldset/label[3]/input
+    sleep    3
+    Click Button    //*[@id="user_register_form"]/fieldset/footer/button
+    sleep    3
